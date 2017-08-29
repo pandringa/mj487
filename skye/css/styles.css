@@ -3,17 +3,19 @@ body {
   font-size: 1.4rem;
 }
 
-#parallax{
+/* Header Styling */
+
+.parallax-background {
   width: 100%;
   position: fixed;
-  top: -125px;
+  top: -150px;
   left: 0;
   right: 0;
   z-index: -1;
   min-height: 640px;
 }
 
-#header{
+header {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
   font-weight: 300;
@@ -22,10 +24,9 @@ body {
 .title{
   background: none;
   text-align: center;
-  vertical-align: center;
   line-height: 400px;
   color: white;
-  text-shadow: 0px 0px 5px #333;
+  text-shadow: 0 0 5px #333;
   margin-bottom: 0;
   font-size: 5em;
   font-weight: 600;
@@ -48,46 +49,52 @@ body {
   color: white;
 }
 
-.menu li{
+.menu .nav-item {
   transition: background 0.3s;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
-.menu li a, .menu .nav-title{
+.menu .nav-item a, .menu .nav-title {
   color: white;
   padding: 10px 20px;
   transition: color 0.3s;
 }
 
-.menu li:hover{
-  background: rgba(255, 255, 255, 0.9);
+.menu .nav-item:hover {
+  background: white;
 }
 
-.menu li:hover a{
+.menu .nav-item:hover a {
   color: #3498db;
 }
 
-.article-body{
+/* Article Body Styling */
+
+.article-body {
   background: white;
   padding-top: 3em;
 }
 
-.article-body p, .article-body h3 {
+p {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.article-body h3{
+h3 {
+  max-width: 650px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4em;
-  margin-top: 2em;
+  margin: 2em auto 0;
   font-weight: 600;
 }
 
-.image-container{
+a {
+  color: #3498db;
+}
+
+.image-container {
   text-align: center;
-  font-size: 1em;
   margin: 2em 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6em;
@@ -100,7 +107,7 @@ body {
   margin: 5px auto;
 }
 
-.footer{
+.footer {
   text-align: center;
   margin: 3em 1em 1em;
   font-family: 'Montserrat';
@@ -108,15 +115,13 @@ body {
   font-weight: 300;
 }
 
-a {
-  color: #3498db;
-}
+/* Media Queries */
 
 @media only screen and (max-width: 1000px) {
   .menu .nav-title, .menu li a {
     padding: 8px 16px;
   }
-  .menu .credit{
+  .menu .credit {
     padding-bottom: 0;
     font-size: 0.5em;
   }
@@ -127,18 +132,18 @@ a {
     line-height: 80px;
     font-size: 3em;
   }
-  .menu ul.nav{
+  .menu .nav {
     margin-left: -1em;
     margin-right: -1em;
     width: calc(100% + 2em);
   }
-  .menu .nav-title{
+  .menu .nav-title {
     display: none;
   }
-  .menu li{
+  .menu .nav-item {
     width: 25%;
   }
-  .menu li a, .menu .credit{
+  .menu .nav-item a, .menu .credit{
     width: 100%;
     text-align: center;
     padding: 10px 0;
