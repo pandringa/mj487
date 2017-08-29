@@ -6,10 +6,11 @@ body {
 #parallax{
   width: 100%;
   position: fixed;
-  top: -200px;
+  top: -125px;
   left: 0;
   right: 0;
   z-index: -1;
+  min-height: 640px;
 }
 
 #header{
@@ -100,7 +101,6 @@ body {
 }
 
 .footer{
-  width: 100%;
   text-align: center;
   margin: 3em 1em 1em;
   font-family: 'Montserrat';
@@ -110,4 +110,37 @@ body {
 
 a {
   color: #3498db;
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu .nav-title, .menu li a {
+    padding: 8px 16px;
+  }
+  .menu .credit{
+    padding-bottom: 0;
+    font-size: 0.5em;
+  }
+}
+
+@media only screen and (max-width:700px) { 
+  .title{
+    line-height: 80px;
+    font-size: 3em;
+  }
+  .menu ul.nav{
+    margin-left: -1em;
+    margin-right: -1em;
+    width: calc(100% + 2em);
+  }
+  .menu .nav-title{
+    display: none;
+  }
+  .menu li{
+    width: 25%;
+  }
+  .menu li a, .menu .credit{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
 }
