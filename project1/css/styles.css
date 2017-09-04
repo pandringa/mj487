@@ -110,15 +110,15 @@ body {
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
 }
-.main-nav-icons li::before {
-  background: #229eff; /* fallback */
+.main-nav-icons li::before { /* icon font */
+  background: #229eff; /* fallback for non-webkit */
   background: -webkit-linear-gradient(-90deg, #229eff, #1e87da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
 }
-.main-nav-icons li::after{
+.main-nav-icons li::after{ /* shadow underneath icons*/
   content: ' ';
   position: absolute;
   top: 105%;
@@ -130,26 +130,25 @@ body {
   background-size: 100% 100%;
   transition: top 0.5s;
 }
-
 /* Position Tweaks */
 .main-nav-icons li.i-dashboard::before{
   font-size: 55px;
 }
+.main-nav-icons li.i-customers::before{
+  width: 70px;
+}
+.main-nav-icons li.i-messages::before {
+  width: 55px;
+}
+/* Position Tweaks */
 .main-nav-icons li.selected::before, .main-nav-icons li:hover::before{
-  background: #33cc66; /* Fallback */
+  background: #33cc66; /* Fallback for non-webkit */
   background: -webkit-linear-gradient(-90deg, #33cc66, #93f8b8);
   -webkit-background-clip: text;
   margin-top: -25px;
 }
 .main-nav-icons li:hover::after{
   top: 110%;
-}
-
-.main-nav-icons li.i-customers::before{
-  width: 70px;
-}
-.main-nav-icons li.i-messages::before {
-  width: 55px;
 }
 
 .main-nav-caret {
@@ -171,7 +170,6 @@ body {
   margin: 15px 5px;
 
 }
-
 .page-header .page-title {
   display: inline-block;
   margin: 12px 24px;
@@ -179,7 +177,6 @@ body {
   font-weight: 400;
   color: white;
 }
-
 .page-header .search-box {
   display: inline-block;
   margin: 20px 15px;
@@ -194,7 +191,6 @@ body {
   outline-offset: -1px;
   z-index: 1;
 }
-
 .page-header .i-search {
   display: inline-block;
   position: relative;
@@ -211,6 +207,7 @@ body {
   color: #134670;
 }
 
+/* Wide gradient around .page-inner */
 .gradient-border {
   position: relative;
   background: blue;
@@ -219,7 +216,7 @@ body {
   border-radius: 10px;
   padding: 15px;
 }
-
+/* Using pseudoelement to create the border's gradient border */
 .gradient-border::before {
   content: ' ';
   position: absolute;
