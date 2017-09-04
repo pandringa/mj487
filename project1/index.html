@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <title>Dashboard - Mini of Raleigh</title>
+  <script src="https://use.typekit.net/tws2cki.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -27,14 +29,16 @@
       <li class="i-analytics"></li>
     </ul>
     <div class="main-nav-fade f-right"></div>
+    <div class="main-nav-caret"></div>
   </nav>
-  <div class="main-page">
+  <div class="main-page container">
     <header class="page-header">
-      <h3 class="page-title"></h3>
-      <div class="search-box"></div>
+      <h1 class="page-title">Dashboard</h1>
+      <a href="#" class="i-search"></a>
+      <input type="text" class="search-box"/>
     </header>
     <div class="gradient-border">
-      <div class="container-inner">
+      <div class="page-inner">
         <section class="announcements">
           <div class="announcements-title"></div>
           <div class="announcements-text"></div>
@@ -78,5 +82,37 @@
     </div>
   </div>
   <footer class="bottom-bar"></footer>
+  
+  <script type="text/javascript">
+    var CARET_WIDTH = document.querySelector('.main-nav-caret').getBoundingClientRect().width;
+
+    // Sets the caret beneath icon with .selected
+    function setCaret(initial){
+      var d = document.querySelector('.main-nav-icons li.selected');
+      if(d)
+        d = d.getBoundingClientRect();
+      document.querySelector('.main-nav-caret').setAttribute('style', 'left: ' + ((d.left+d.right)/2 - CARET_WIDTH/2) + 'px;');
+    }
+
+    // Set caret to initial position
+    setCaret(true);
+
+    // Move caret and .selected class on icon click  
+    document.querySelectorAll('.main-nav-icons li')
+      .forEach(function(icon){
+        icon.onclick = function(){
+          document.querySelector('.main-nav-icons li.selected').classList.remove('selected');
+          icon.classList.add('selected');
+          setCaret();
+        }
+      });
+
+    // Move caret on window resize
+    window.onresize = function(event) {
+      requestAnimationFrame(function(){
+        setCaret();
+      });
+    };
+  </script>
 </body>
 </html>

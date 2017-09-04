@@ -1,7 +1,14 @@
 /*Bootstrap Overrides */
 .container{
   padding: 0 !important;
-  width: 840px !important;
+  max-width: 970px !important;
+}
+
+/* Global Styles */
+body {
+  font-family: "myriad-pro", sans-serif;
+  font-size: 14px;
+  color: #222;
 }
 
 /* Top Bar */
@@ -21,9 +28,10 @@
   font-weight: bold;
   color: white;
   transition: color 0.3s;
+  cursor: pointer;
 }
 .top-bar .top-bar-name{
-  font-size: 10px;
+  font-size: 14px;
   line-height: 26px;
   padding-right: 15px;
   top: 1;
@@ -36,7 +44,7 @@
 }
 .top-bar a:hover {
   text-decoration: none;
-  color: #134670;
+  color: #aaa;
 }
 
 /* Main Navigation */
@@ -113,7 +121,7 @@
 .main-nav-icons li::after{
   content: ' ';
   position: absolute;
-  top: 110%;
+  top: 105%;
   left: 0;
   width: 100%;
   height: 5px;
@@ -125,15 +133,16 @@
 
 /* Position Tweaks */
 .main-nav-icons li.i-dashboard::before{
-  font-size: 60px;
+  font-size: 55px;
 }
-.main-nav-icons li.selected::before, li:hover::before{
+.main-nav-icons li.selected::before, .main-nav-icons li:hover::before{
   background: #33cc66; /* Fallback */
   background: -webkit-linear-gradient(-90deg, #33cc66, #93f8b8);
   -webkit-background-clip: text;
+  margin-top: -25px;
 }
 .main-nav-icons li:hover::after{
-  top: 115%;
+  top: 110%;
 }
 
 .main-nav-icons li.i-customers::before{
@@ -141,4 +150,92 @@
 }
 .main-nav-icons li.i-messages::before {
   width: 55px;
+}
+
+.main-nav-caret {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 0px;
+  height: 0px;
+  border: 17px solid transparent;
+  border-bottom-color: #fff;
+  border-bottom-width: 8px;
+  transition: left 0.5s;
+}
+
+/* Main Content Styling */
+.page-header {
+  background: #33cc66;
+  border-radius: 5px;
+  margin: 15px 5px;
+
+}
+
+.page-header .page-title {
+  display: inline-block;
+  margin: 12px 24px;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+}
+
+.page-header .search-box {
+  display: inline-block;
+  margin: 20px 15px;
+  font-size: 14px;
+  padding: 7px 40px 7px 10px;
+  width: 258px;
+  vertical-align: top;
+  float: right;
+  border-radius: 2px;
+  border: 1px solid #2db55b;
+  outline-color: #2db55b;
+  outline-offset: -1px;
+  z-index: 1;
+}
+
+.page-header .i-search {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  line-height: 75px;
+  font-size: 20px;
+  color: #2498f4;
+  float: right;
+  left: -50px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.page-header .i-search:hover{
+  color: #134670;
+}
+
+.gradient-border {
+  position: relative;
+  background: blue;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #f6f6f6 0%, #fff 250px, #fff 100%);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.gradient-border::before {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: red;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #eee 0%, #fff 250px, #fff 100%);
+}
+
+.page-inner{
+  width: 100%;
+  background: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  min-height: 1000px;
 }
