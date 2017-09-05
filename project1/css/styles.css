@@ -33,8 +33,9 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  transition: color 0.3s;
+  transition: color 0.2s;
   cursor: pointer;
+  text-decoration: none;
 }
 .top-bar .top-bar-name{
   font-size: 14px;
@@ -49,8 +50,10 @@ body {
   padding-right: 0;
 }
 .top-bar a:hover {
-  text-decoration: none;
-  color: #aaa;
+  color: #134670;
+}
+.top-bar a:active {
+  color: #111;
 }
 
 /* Main Navigation */
@@ -138,20 +141,21 @@ body {
 }
 /* Position Tweaks */
 .main-nav-icons li.i-dashboard:before{
-  font-size: 55px;
+  font-size: 1.25em;
+  padding-top: 5px;
 }
 .main-nav-icons li.i-customers:before{
-  width: 70px;
+  width: 1.45em;
 }
 .main-nav-icons li.i-messages:before {
-  width: 55px;
+  width: 1.2em;
 }
 /* Position Tweaks */
 .main-nav-icons li.selected:before, .main-nav-icons li:hover:before{
   background: #33cc66; /* Fallback for non-webkit */
   background: -webkit-linear-gradient(-90deg, #33cc66, #93f8b8);
   -webkit-background-clip: text;
-  margin-top: -25px;
+  /*margin-top: -25px;*/
 }
 .main-nav-icons li:hover:after{
   top: 110%;
@@ -224,7 +228,7 @@ body {
   border-radius: 10px;
   padding: 15px;
 }
-/* Using pseudoelement to create the border's gradient border */
+/* Using pseudoelement to create the additional darker gradient border */
 .gradient-border:before {
   content: ' ';
   position: absolute;
@@ -247,11 +251,16 @@ body {
 }
 
 /* Section Globals */
+.main-columns {
+  display: flex;
+  flex-flow: row wrap;
+}
 .main-column-left {
   display: inline-block;
   width: 35%;
   font-size: 14px;
   vertical-align: top;
+  order: 1;
 }
 .main-column-right {
   display: inline-block;
@@ -259,6 +268,7 @@ body {
   font-size: 14px;
   vertical-align: top;
   border-left: 1px solid #eee;
+  order: 2;
 }
 .bottom-shadow {
   position: relative;
@@ -286,38 +296,38 @@ body {
 /* Announcements Section */
 .announcements {
   position: relative;
+  flex: 0;
   display: flex;
+  flex-flow: row wrap;
   margin-bottom: 5px;
   font-size: 14px;
+  width: 100%;
 }
 .announcements-title {
   display: inline-block;
-  padding: 20px;
-  padding-left: 20px !important; /* Override column default */
-  padding-right: 35px !important;
+  padding: 20px 20px 20px 35px;
   border-right: 1px solid #eee;
   font-weight: bold;
+  text-transform: uppercase;
   color: #fe7f13;
   flex-grow: 0;
+  order: 1;
 }
 .announcements-text {
   display: inline-block;
   color: #777;
-  padding: 20px;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  padding: 20px 15px;
   flex-grow: 1;
   overflow: hidden;
+  order: 2;
 }
 .announcements-buttons {
   display: inline-block;
   border-left: 1px solid #eee;
-  padding: 18px;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  padding: 18px 15px;
   text-align: center;
-  flex-grow: 0;
-  flex-shrink: 0;
+  flex: 0 0;
+  order: 3;
 }
 .announcements-buttons .centered{
   display: inline;
@@ -388,6 +398,7 @@ body {
   font-size: 21px;
   color: #2498f4;
   cursor: pointer;
+  transition: color 0.2s;
 }
 .task-list li:not(:last-of-type){
   border-bottom: 1px solid #eee;
@@ -408,6 +419,7 @@ body {
   line-height: 18px;
   color: white;
   text-align: center;
+  transition: background 0.2s;
 }
 .task-list li button {
   position: relative;
@@ -423,6 +435,7 @@ body {
   text-align: center;
   width: 58px;
   cursor: pointer;
+  transition: color 0.2s;
 }
 .task-list li button:before {
   position: absolute;
@@ -1016,5 +1029,49 @@ body {
   background: url(../img/social/youtube-color.png);
 }
 
-
-
+/*
+**  Mobile Styles
+*/
+@media (max-width: 576px) {
+  .main-nav-icons li {
+    font-size: 30px;
+    margin: 35px 5px;
+  }
+  .page-header .i-search {
+    color: white;
+  }
+  .page-header .search-box{
+    display: none;
+  }
+  .announcements {
+    flex-flow: row wrap;
+  }
+  .announcements-title {
+    padding: 16px 15px 8px;
+    flex-grow: 3;
+    border-right: none;
+  }
+  .announcements-buttons {
+    padding: 13px 15px 8px;
+    flex-grow: 2;
+    border-left: none;
+    order: 2;
+  }
+  .announcements-text {
+    padding: 0 10px 10px;
+    width: 100%;
+    order: 3;
+    white-space: normal;
+    text-align: center;
+  }
+  .main-column-left {
+    display: block;
+    width: 100%;
+    order: 2;
+  }
+  .main-column-right {
+    display: block;
+    width: 100%;
+    order: 1;
+  }
+}
