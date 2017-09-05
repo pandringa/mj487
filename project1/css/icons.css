@@ -1,4 +1,4 @@
-/* Icons: SVGs converted to font by Fontello.com; */
+/* Icons: SVGs converted to font by Fontello.com */
 
 @font-face {
   font-family: 'fontello';
@@ -56,8 +56,7 @@
 .i-youtube-color:before { content: '\e806'; } /* '' */
 .i-youtube-gray:before { content: '\e807'; } /* '' */
 .i-caret-down:before { content: '\e808'; } /* '' */
-.i-caret-left:before { content: '\e809'; } /* '' */
-.i-caret-left2:before { content: '\e80a'; } /* '' */
+.i-caret-left:before { content: '\e80a'; } /* '' */
 .i-caret-right:before { content: '\e80b'; } /* '' */
 .i-caret-up:before { content: '\e80c'; } /* '' */
 .i-check:before { content: '\e80d'; } /* '' */
