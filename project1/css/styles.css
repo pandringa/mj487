@@ -497,20 +497,22 @@ section {
   position: relative;
   float: right;
   margin-right: 20px;
+  font-size: 13px;
   cursor: pointer;
 }
 .activity-select .custom-select{
   background: none;
-  padding-right: 50px;
+  padding: 0 50px 0 15px;
   z-index: 2;
   cursor: pointer;
+  font-size: 13px;
 }
 .activity-select .custom-select:focus{
   border-color: #2498f4;
 }
 .activity-select .i-caret-left {
   position: absolute;
-  right: 5px;
+  right: 4px;
   top: 1px;
   height: calc(100% - 2px);
   width: 35px;
@@ -523,9 +525,9 @@ section {
 }
 .activity-select .i-caret-left:before{
   position: absolute;
-  left: 6px;
-  top: 2px;
-  font-size: 26px;
+  left: 7px;
+  top: 3px;
+  font-size: 24px;
   transform: rotate(-90deg);
 }
 .activity-graph {
