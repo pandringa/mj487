@@ -310,9 +310,8 @@ section {
 }
 .announcements-title {
   display: inline-block;
-  padding: 20px 20px 20px 35px;
+  padding: 18px 30px 14px 15px;
   border-right: 1px solid #eee;
-  font-weight: bold;
   text-transform: uppercase;
   color: #fe7f13;
   flex-grow: 0;
@@ -321,7 +320,7 @@ section {
 .announcements-text {
   display: inline-block;
   color: #777;
-  padding: 20px 15px;
+  padding: 18px 15px 14px;
   flex-grow: 1;
   overflow: hidden;
   order: 2;
@@ -329,7 +328,7 @@ section {
 .announcements-buttons {
   display: inline-block;
   border-left: 1px solid #eee;
-  padding: 18px 15px;
+  padding: 16px 15px 12px;
   text-align: center;
   flex: 0 0;
   order: 3;
@@ -993,7 +992,6 @@ section {
   border-radius: 2px;
   background-size: contain;
   background-position: 0 0;
-  margin: 2px;
   vertical-align: middle;
 }
 .bottom-social a:after{
@@ -1132,7 +1130,7 @@ section {
     border-right: none;
     order: 2;
     flex-grow: 0;
-    width: 90px;
+    width: 75px;
   }
   .bottom-links a {
     display: block;
@@ -1161,7 +1159,7 @@ section {
   }
   .bottom-social {
     border-right: none;
-    width: 90px;
+    width: 75px;
     flex-grow: 0;
   }
 }
