@@ -62,6 +62,7 @@ body {
   height: 111px;
   background: #134670;
   position: relative;
+  /* Shout out to https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for being a great bookmark */ 
   display: flex;
 }
 
@@ -119,6 +120,8 @@ body {
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
 }
+
+/* Webkit gradient text trick from https://css-tricks.com/snippets/css/gradient-text/ */
 .main-nav-icons li:before { /* icon font */
   background: #229eff; /* fallback for non-webkit */
   background: -webkit-linear-gradient(-90deg, #229eff, #1e87da);
@@ -564,7 +567,7 @@ section {
   height: 25px;
   top: 8px;
   margin-right: 4px;
-  cursor: pointerr;
+  cursor: pointer;
 }
 .checkbox-container input {
   position: absolute;
@@ -671,6 +674,7 @@ section {
   left: -5px;
   top: 10px;
 }
+/* Is this kind of hacky? Maybe. Does it make the HTML prettier? Definitely. */
 .recommendations-list li:after {
   display: block;
   position: absolute;
@@ -969,7 +973,6 @@ section {
   box-shadow: 0 1px 3px rgba(0,0,0, 0.45);
 }
 .bottom-logout a {
-
   display: inline-block;
   margin: 16px 10px;
   color: #2498f2;
@@ -996,7 +999,7 @@ section {
   background-position: 0 0;
   vertical-align: middle;
 }
-.bottom-social a:after{
+.bottom-social a:after{ /* :after holds hover states */
   content: ' ';
   position: absolute;
   width: 100%;
@@ -1150,9 +1153,6 @@ section {
   .bottom-notif .i-caret-right {
     top: -3px;
     left: -8px;
-  }
-  .bottom-notif .i-caret-right:hover {
-    /*top: -30px;*/
   }
   .bottom-logout {
     border-left: 1px solid #ddd;

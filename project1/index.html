@@ -229,20 +229,16 @@
 
     // Move caret and .selected class on icon click  
     document.querySelectorAll('.main-nav-icons li')
-      .forEach(function(icon){
-        icon.onclick = function(){
-          document.querySelector('.main-nav-icons li.selected').classList.remove('selected');
-          icon.classList.add('selected');
-          setCaret();
-        }
-      });
+    .forEach( (icon) =>
+      icon.onclick = () => {
+        document.querySelector('.main-nav-icons li.selected').classList.remove('selected');
+        icon.classList.add('selected');
+        setCaret();
+      }
+    );
 
     // Move caret on window resize
-    window.onresize = function(event) {
-      requestAnimationFrame(function(){
-        setCaret();
-      });
-    };
+    window.onresize = setCaret;
   </script>
 </body>
 </html>
