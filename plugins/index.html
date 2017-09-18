@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Dropdown nav</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js"></script>
+  </head>
+  <body>
+    <select id="demo-htmlselect">
+      <option value="0" data-imagesrc="http://i.imgur.com/XkuTj3B.png"
+          data-description="Description with Facebook">Facebook</option>
+      <option value="1" data-imagesrc="http://i.imgur.com/8ScLNnk.png"
+          data-description="Description with Twitter">Twitter</option>
+      <option value="2" selected="selected" data-imagesrc="http://i.imgur.com/aDNdibj.png"
+          data-description="Description with LinkedIn">LinkedIn</option>
+      <option value="3" data-imagesrc="http://i.imgur.com/kFAk2DX.png"
+          data-description="Description with Foursquare">Foursquare</option>
+    </select>
+    <div>
+      <button id="make-it-slick">Make it slick!</button>
+      <button id="restore">Restore to original</button>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(() => {
+        $('#make-it-slick').on('click', () => {
+            $('#demo-htmlselect').ddslick();
+        });
+        $('#restore').on('click', () => {
+            $('#demo-htmlselect').ddslick('destroy');
+        });
+      });
+    </script>
+  </body>
+</html>
