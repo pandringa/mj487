@@ -128,7 +128,7 @@
                 "title": "Which of the following methods of transportation is Amazon <b>NOT</b> investing in?"
             },
             {
-                "answer": "Vespa (scooters)",
+                "answer": "Vespa scooters",
                 "correct": true,
                 "subhed": "Correct!",
                 "text" : "Amazon has acquired planes for their PrimeAir freight service, container ships for international shipping, and drones for last-mile delivery to homes, but they have not (yet) made any investment in Vespa scooters.",

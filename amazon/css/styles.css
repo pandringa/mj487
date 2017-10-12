@@ -384,6 +384,7 @@ section {
   background-color: #EBDE58;
   border-color: #D5CA51;
   color: #111;
+  outline: none;
 }
 #quiz button:hover {
   background-color: #D5CA51;

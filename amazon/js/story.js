@@ -665,7 +665,7 @@ function setUpQuiz(questions) {
     "You got zero out of four correct. Why don't you just <a href='#home'>scroll to the top</a> and read it again...",
     "You got one out of four correct. At least you learned <i>something</i>.",
     "You got two out of four correct. Not too shabby, but you've definitely got room to learn.",
-    "You got three out of four correct. That's pretty good – consider yourself an Amazon Expert.",
+    "You got three out of four correct. That's pretty good - consider yourself an Amazon Expert.",
     "You got four out of four correct: you're pretty much the next Jeff Bezos!"
   ], {});
   $('.how_you_did').hide();
@@ -673,7 +673,7 @@ function setUpQuiz(questions) {
     <li class="question_container row-fluid question_-1 current initial">
       <div class="center-container">
         <div class="centered">
-          <h1 class="title">How well do you know how Amazon works?</h1>
+          <h1 class="title">Do you know how Amazon works?</h1>
           <button class="next">Start Quiz ></button>
         </div>
       </div>
