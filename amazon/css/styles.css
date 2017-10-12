@@ -429,16 +429,16 @@ footer {
   padding-bottom: 1em;
   color: white;
   text-align: center;
+  overflow: hidden;
 }
 footer a {
   color: white;
 }
-
 #credits {
-  visibility: hidden;
+  font-size: 0;
 }
 .jquery-modal #credits {
-  visibility: visible;
+  font-size: 14px;
 }
 
 .show-mobile {
@@ -448,15 +448,18 @@ footer a {
 /* Mobile Styles */
 @media only screen and (max-device-width: 768px){
   section, section#home, section#warehouse, section#outside {
-    padding: 5em;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding: 0 3em;
+    padding-left: 3em;
+    padding-right: 3em;
     font-size: 2rem;
   }
   section .slide {
-    flex-flow: column;
     height: auto;
-    margin: 100px 0;
+    min-height: 100vh;
+    flex-flow: column;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
   }
   section .slide-inner {
     width: 100%;
@@ -473,47 +476,95 @@ footer a {
     display: block;
     top: 0;
     left: 0;
-    margin: auto;
-    flex-order: 4;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .home-2 .server {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 200px;
+  }
+
+  .home-2 .cloud {
+    position: absolute;
+  }
+  .home-2 .cloud-1 {
+    width: 80%;
+    left: 0;
+    top: 35%;
+  }
+  .home-2 .cloud-2 {
+    width: 70%;
+    right: 0;
+    top: 20%;
+  }
+  .home-2 .cloud-3 {
+    width: 60%;
+    left: 2%;
+    top: 24%;
+  }
+  .home-2 .cloud-4 {
+    width: 60%;
+    right: 2%;
+    top: 35%;
+  }
+  .home-2 .cloud-5 {
+    top: 20%;
+    left: 5%;
+    width: 90%;
+  }
+
+  .home-3 .server {
+    width: 60%;
+    margin-bottom: 50px;
+  }
+
+  .home-3 .fufillment-arrow {
+    position: relative;
+    margin: 100px 0 150px;
+    left: -40%;
+    right: 0;
+    opacity: 0;
+  }
+
+  .home-3 .fufillment-center-mobile {
+    width: 100%;
+    margin-bottom: 200px;
+    transform: scale(0.7);
   }
 
   .warehouse-1 .robot {
     position: absolute;
     display: block;
     top: 0;
-    left: calc(50% - 80px);
+    left: 0;
     width: 160px;
   }
-
   .warehouse-1 .shelves {
     position: relative;
     display: block;
     top: 0;
     left: 0;
     width: 100%;
-    margin: 200px 0;
+    margin: 150px 0;
   }
   .warehouse-1 .single-shelf {
     position: absolute;
     display: block;
-    top: 380px;
-    left: calc(50% - 80px);
-    width: 160px;
+    top: 400px;
+    left: 38%;
+    width: 24%;
   }
 
-  .warehouse-2 .crate {
-    position: relative;
+  .warehouse-2 .crate, .warehouse-3 .box {
+    position: absolute;
     display: block;
-    top: 0;
-    left: 0;
-    width: 200px;
-  }
-
-  .warehouse-3 .box {
-    position: relative;
-    display: block;
-    top: 0;
-    left: 0;
+    top: 400px;
+    left: calc(50% - 100px);
     width: 200px;
   }
 
@@ -534,6 +585,7 @@ footer a {
     height: 300px;
     top: 0;
     left: -5em;
+    margin-top: 200px;
     margin-bottom: 400px;
   }
 
@@ -548,13 +600,19 @@ footer a {
   }
 
   #outside .road .truck-mobile {
+    position: relative;
     transform: rotate(180deg);
     margin: 25px auto 0;
+    left: calc(50% + 6em);
+  }
+
+  #outside .outside-1 {
+    min-height: 40vh;
   }
 
   .outside-1 .plane {
     position: absolute;
-    left: 300px;
+    left: calc(-300px - 3em);
     top: -350px;
     width: 300px;
   }
@@ -565,9 +623,17 @@ footer a {
     top: 0;
     left: 0;
     height: auto;
+    width: 80%;
     overflow: hidden;
     background: none;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
+  }
+
+  .outside-2 .truck-mobile {
+    position: absolute;
+    top: 32%;
+    left: calc(-50% - 3em);
+    width: 50%;
   }
 
   .outside-2 .regional-center img {
@@ -575,15 +641,15 @@ footer a {
   }
 
   .outside-2 .drone {
-    left: 0;
-    top: 110%;
+    left: calc(50% - 100px);
+    top: 35%;
     width: 200px;
   }
 
   .outside-2 .drone-box {
     width: 90px;
-    left: calc(0px + 55px);
-    top: calc(110% + 45px);
+    left: calc(50% - 45px);
+    top: calc(35% + 45px);
   }
 
   #outside .house-container {
@@ -591,12 +657,27 @@ footer a {
     width: 100%;
     left: 0;
     top: 0;
+    padding: 200px 0;
   }
 
+  .house-container .drone {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: calc(-200px - 3em);
+    z-index: 2;
+  }
+  .house-container .drone-box {
+    width: 90px;
+    position: absolute;
+    top: 45px;
+    right: calc(-145px - 3em);
+    z-index: 2;
+  }
 
   #quiz .quiz {
     margin: 0;
-    height: 60vh;
+    height: calc(50vh + 20px);
   }
   #quiz .possible_answers {
     font-size: 0;

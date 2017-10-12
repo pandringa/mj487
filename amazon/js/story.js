@@ -67,13 +67,6 @@ if(!IS_MOBILE){ // Full screen animations
   })
   .setTween(new TimelineMax ()
     .add([
-      // TweenMax.to(".cloud-1", 1, {y: h/1.5, ease: Linear.EaseNone}),
-      // TweenMax.to(".cloud-2", 1, {y: h/1.5, ease: Linear.EaseNone}),
-      // TweenMax.to(".cloud-3", 1, {y: h/1.5, ease: Linear.EaseNone}),
-      // TweenMax.to(".cloud-4", 1, {y: h/1.5, ease: Linear.EaseNone}),
-      // TweenMax.to(".cloud-5", 1, {y: h/1.5, ease: Linear.EaseNone}),
-      // TweenMax.to(".cloud-6", 1, {y: h/1.5, ease: Linear.EaseNone}),
-      // TweenMax.to(".cloud-7", 1, {y: h/1.5, ease: Linear.EaseNone}),
       TweenMax.to(".arrow", 1, {css: {opacity: 0}}),
       TweenMax.to(".laptop", 1, {css: {opacity: 0}}),
     ]))
@@ -113,13 +106,13 @@ if(!IS_MOBILE){ // Full screen animations
   })
   .setTween(new TimelineMax ()
     .add([
-      TweenMax.to(".cloud-1", 1, {y: h/2, ease: Linear.EaseNone}),
-      TweenMax.to(".cloud-2", 1, {y: h/2, ease: Linear.EaseNone}),
-      TweenMax.to(".cloud-3", 1, {y: h/2, ease: Linear.EaseNone}),
-      TweenMax.to(".cloud-4", 1, {y: h/2, ease: Linear.EaseNone}),
-      TweenMax.to(".cloud-5", 1, {y: h/2, ease: Linear.EaseNone}),
-      TweenMax.to(".cloud-6", 1, {y: h/2, ease: Linear.EaseNone}),
-      TweenMax.to(".cloud-7", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-1.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-2.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-3.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-4.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-5.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-6.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
+      TweenMax.to(".cloud-7.hide-mobile", 1, {y: h/2, ease: Linear.EaseNone}),
       TweenMax.to(".fufillment-arrow", 1, {css: {opacity: 0}}),
       TweenMax.to(".server", 1, {y: h/2, ease: Linear.EaseNone})
     ]))
@@ -401,6 +394,243 @@ if(!IS_MOBILE){ // Full screen animations
   .addTo(controller);
 } else { // Mobile Animations
   console.log("Using mobile animations");
+
+  // Clouds revealing server
+  new ScrollMagic.Scene({
+    triggerElement: '.home-2',
+    duration: $window.height(),
+  })
+  .setTween(new TimelineMax ()
+    .add([
+      TweenMax.to(".cloud-1.show-mobile", 1, {x: -550, y: 100}),
+      TweenMax.to(".cloud-2.show-mobile", 1, {x: 620, y: -63}),
+      TweenMax.to(".cloud-3.show-mobile", 1, {x: -600, y: -124}),
+      TweenMax.to(".cloud-4.show-mobile", 1, {x: 530, y: -85}),
+      TweenMax.to(".cloud-5.show-mobile", 1, {x: 0, y: -200}),
+      TweenMax.to(".server", 1, {css: {opacity: 1, scale: 1}}),
+    ]))
+  // .addIndicators()
+  .addTo(controller);
+
+  // Arrow from server to fufillment center
+  new ScrollMagic.Scene({
+    triggerElement: '.home-3',
+    duration: $window.height(),
+  })
+  .setTween(new TimelineMax ()
+    .add([
+      TweenMax.to(".fufillment-arrow", 0.5, {css: {opacity: 1, scale: 1.5}}),
+      TweenMax.to(".fufillment-center-mobile", 1, {css: {scale: 1}}),
+    ]))
+  // .addIndicators()
+  .addTo(controller);
+
+  // Robot moving to shelf
+  new ScrollMagic.Scene({
+    triggerElement: '.warehouse-1',
+    duration: $window.height()/2,
+  })
+  .setTween(new TweenMax.to('.robot', 1, {css: {bezier:{
+      type: 'thru',
+      curviness: 1,
+      timeResolution: 8,
+      autoRotate: false,
+      values: [
+          {
+            left: 25,
+            top: 50
+          },
+          {
+            left: "40%",
+            top: 850
+          }
+      ]
+    }}})
+  ) 
+  // .addIndicators()
+  .addTo(controller);
+
+  // Robot picking up shelf
+  new ScrollMagic.Scene({
+    triggerElement: '.warehouse-1',
+    duration: $window.height()/2,
+    offset: $window.height()/2
+  })
+  .setTween(new TimelineMax ()
+    .add([
+      TweenMax.to(".single-shelf", 1, {y: 100}),
+      TweenMax.to(".robot", 1, {y: 100}),
+    ]))
+  // .addIndicators()
+  .addTo(controller);
+
+  // Crate moving
+  new ScrollMagic.Scene({
+    triggerElement: '.warehouse-2',
+    duration: $window.height(),
+  })
+  .setTween(new TweenMax.to('.crate', 1, {css: {bezier:{
+      type: 'thru',
+      curviness: 1,
+      timeResolution: 8,
+      autoRotate: false,
+      values: [
+          {
+            x: -200,
+            y: 200
+          },
+          {
+            x: 200,
+            y: 400
+          },
+          {
+            x: 0,
+            y: 600
+          }
+      ]
+    }}})
+  )
+  // .addIndicators()
+  .addTo(controller);
+
+  // Box moving and closing/labling
+  new ScrollMagic.Scene({
+    triggerElement: '.warehouse-3',
+    duration: $window.height(),
+  })
+  .setTween(new TimelineMax ()
+  .to(".box", 3, {css: {
+    bezier:{
+      type: 'thru',
+      curviness: 1,
+      autoRotate: false,
+      values: [
+          {
+            x: -200,
+            y: 200
+          },
+          {
+            x: 200,
+            y: 400
+          },
+          {
+            x: 0,
+            y: 600
+          }
+      ]
+    }}
+  })
+  .addCallback(function(){
+    $('.box .open').toggleClass('active');
+    $('.box .closed').toggleClass('active');
+  }, 0.4)
+  .addCallback(function(){
+    $('.box .closed').toggleClass('active');
+    $('.box .labeled').toggleClass('active');
+  }, 1.5)
+  )
+  // .addIndicators()
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.warehouse-4',
+    duration: $window.height()* 3/4,
+    offset: $window.height()/2
+  })
+  .setTween(new TweenMax.to(".truck-4", 1, {x: $window.width()}))
+  // .addIndicators()
+  .addTo(controller);
+
+  // Truck and plane crossing screen
+  new ScrollMagic.Scene({
+    triggerElement: '#outside',
+    duration: $window.height() * 3/4,
+  })
+  .setTween(new TimelineMax ()
+    .add([
+      TweenMax.to(".road .truck-mobile", 1, {x: -$window.width()*1.5}),
+      TweenMax.to(".plane", 0.5, {x: $window.width()*1.5, delay: 0.5}),
+    ]))
+  // .addIndicators()
+  .addTo(controller);
+
+
+  // Truck entering and drone leaving regional center
+  var bezierOut = {bezier:{
+    type: 'thru',
+    curviness: 1,
+    autoRotate: false,
+    values: [
+        {
+          x: 0,
+          y: 200
+        },
+        {
+          x: $window.width(),
+          y: 200
+        }
+    ]
+  }};
+  new ScrollMagic.Scene({
+    triggerElement: '.outside-2',
+    duration: $window.height(),
+  })
+  .setTween(new TimelineMax ()
+    .add([
+      TweenMax.to(".outside-2 .truck-mobile", 1, {x: $window.width() * 3/4}),
+      TweenMax.to(".outside-2 .drone", 1.5, {delay: 0.5, css: bezierOut}),
+      TweenMax.to(".outside-2 .drone-box", 1.5, {delay: 0.5, css: bezierOut})
+    ]))
+  // .addIndicators()
+  .addTo(controller);
+
+
+  // Drone dropping off package
+  var homex = $('.house').offset().left - $('.house-container .drone').offset().left;
+  var homey = $('.house').offset().top - $('.house-container .drone').offset().top;
+  var curvePathIn = {bezier:{
+      type: 'thru',
+      curviness: 1.25,
+      autoRotate: false,
+      values: [
+          {
+            x: homex + $('.house').width() / 2 + 100,
+            y: homey - 100
+          },
+          {
+            x: homex + $('.house').width() / 2,
+            y: homey + $('.house').height() + 250
+          }
+      ]
+  }};
+  var curvePathOut = {bezier:{
+      type: 'thru',
+      curviness: 1.25,
+      autoRotate: false,
+      values: [
+          {
+            x: homex + $('.house').width() / 2 - 100,
+            y: homey + 100
+          },
+          {
+            x: - $window.width() - 200,
+            y: 200
+          }
+      ]
+  }};
+  new ScrollMagic.Scene({
+    triggerElement: '.outside-2',
+    duration: $window.height()/2,
+    offset: $window.height(),
+  })
+  .setTween(new TimelineMax ()
+    .add([
+      TweenMax.to(".house-container .drone", 1, {css: curvePathIn}),
+      TweenMax.to(".house-container .drone-box", 1, {css: curvePathIn}),
+      TweenMax.to(".house-container .drone", 1, {delay: 1, css: curvePathOut}),
+    ]))
+  // .addIndicators()
+  .addTo(controller);
 }
 
 
