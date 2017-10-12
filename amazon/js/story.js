@@ -9,7 +9,7 @@ new ScrollMagic.Scene({
   offset: -100
 })
 .setTween(new TweenMax.to('body', 1, {backgroundColor: '#848484'}))
-.addIndicators()
+//.addIndicators()
 .addTo(controller);
 // Transition to outside colors
 new ScrollMagic.Scene({
@@ -18,7 +18,7 @@ new ScrollMagic.Scene({
   offset: -100
 })
 .setTween(new TweenMax.to('body', 1, {backgroundColor: '#5FB156'}))
-.addIndicators()
+//.addIndicators()
 .addTo(controller);
 
 if(!IS_MOBILE){ // Full screen animations
@@ -47,7 +47,7 @@ if(!IS_MOBILE){ // Full screen animations
       TweenMax.to(".laptop .checkout", 1, {css: {left: "0"}})
     ]))
   .setPin('.laptop', {pushFollowers: false})
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Make arrow appear slightly later
@@ -56,7 +56,7 @@ if(!IS_MOBILE){ // Full screen animations
     duration: 100
   })
   .setTween(new TweenMax.to('.arrow', 1, {opacity: 1}))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Hide Arrow and Laptop
@@ -77,7 +77,7 @@ if(!IS_MOBILE){ // Full screen animations
       TweenMax.to(".arrow", 1, {css: {opacity: 0}}),
       TweenMax.to(".laptop", 1, {css: {opacity: 0}}),
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Show fufillment center
@@ -89,7 +89,7 @@ if(!IS_MOBILE){ // Full screen animations
     .add([
       TweenMax.to(".fufillment-center", 1, {y: -1 * $('.fufillment-center').height()}),
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Show arrow
@@ -102,7 +102,7 @@ if(!IS_MOBILE){ // Full screen animations
     .add([
       TweenMax.to(".fufillment-arrow", 1, {css: {opacity: 1}}),
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Hide arrow, server, clouds, and fufillment center
@@ -123,7 +123,7 @@ if(!IS_MOBILE){ // Full screen animations
       TweenMax.to(".fufillment-arrow", 1, {css: {opacity: 0}}),
       TweenMax.to(".server", 1, {y: h/2, ease: Linear.EaseNone})
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   /***********************************************
@@ -138,7 +138,7 @@ if(!IS_MOBILE){ // Full screen animations
     .add([
       new TweenMax.to('.fufillment-center', 1, {scale: 10, opacity: 0, y: -500})
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Show Kiva Robot
@@ -173,7 +173,7 @@ if(!IS_MOBILE){ // Full screen animations
         }}
       })
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Pin shelf
@@ -183,7 +183,7 @@ if(!IS_MOBILE){ // Full screen animations
     offset: $window.height()/2
   })
   .setPin('.single-shelf')
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller)
 
   // Move robot, introduce bin
@@ -237,7 +237,7 @@ if(!IS_MOBILE){ // Full screen animations
         }}
       }),
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller)
 
 
@@ -252,7 +252,7 @@ if(!IS_MOBILE){ // Full screen animations
       new TweenMax.to(".fufillment-center", 1, {css: {scale: 10, opacity: 0, top: '50%'}}),
       new TweenMax.to('body', 1, {backgroundColor: '#848484'})
     ]))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Move box, transition through colors
@@ -294,7 +294,7 @@ if(!IS_MOBILE){ // Full screen animations
       $('.box .labeled').toggleClass('active');
     }, 1.5)
   )
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Pin truck
@@ -305,7 +305,7 @@ if(!IS_MOBILE){ // Full screen animations
     offset: -40
   })
   .setPin(".truck-1")
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Move truck left
@@ -330,7 +330,7 @@ if(!IS_MOBILE){ // Full screen animations
           }
       ]
   }}}))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   /***********************************************
@@ -344,7 +344,7 @@ if(!IS_MOBILE){ // Full screen animations
     offset: $window.height()/2
   })
   .setTween(new TweenMax.to('.plane', 1, {x: $window.width()+300}))
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 
   // Drone leaving distribution center
@@ -397,7 +397,7 @@ if(!IS_MOBILE){ // Full screen animations
       ]
     }}})
   )
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 } else { // Mobile Animations
   console.log("Using mobile animations");
