@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 16px;
+  font-size: 1.1em;
   background: #A5D8FF;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -42,14 +42,14 @@ section#outside {
   justify-content: center;
 }
 .slide p {
-  line-height: 22px;
+  line-height: 1.6em;
 }
 .slide b {
   color: #FFCB44;
 }
 
 .slide.home-1 h1 {
-  font-size: 65px;
+  font-size: 3.5em;
   text-align: center;
 }
 .slide.home-1 h4 {
@@ -115,10 +115,11 @@ section#outside {
 }
 
 .slide.home-2 .server {
-  width: 300px;
+  width: 30%;
+  max-width: 300px;
   position: fixed;
   top: 100px;
-  left: 30%;
+  left: 25%;
   opacity: 0;
   z-index: -1;
   transform: scale(0.25);
@@ -202,7 +203,7 @@ section#outside {
   position: absolute;
   top: 55%;
   width: 350px;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 .slide.warehouse-4 .truck.truck-1 {
   left: 90%;
@@ -308,7 +309,7 @@ section.quiz #quiz-container {
   overflow: hidden;
 }
 section.quiz ul.quiz{
-  height: 500px;
+  height: 520px;
   overflow: hidden;
 }
 section.quiz li.question_container {
@@ -415,4 +416,180 @@ footer a {
 }
 .jquery-modal #credits {
   visibility: visible;
+}
+
+.show-mobile {
+  display: none !important;
+}
+
+/* Mobile Styles */
+@media only screen and (max-device-width: 768px){
+  section, section#home, section#warehouse, section#outside {
+    padding: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-size: 2rem;
+  }
+  section .slide {
+    flex-flow: column;
+    height: auto !important;
+    margin: 100px 0;
+  }
+  section .slide-inner {
+    width: 100%;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  .show-mobile {
+    display: inherit !important;
+  }
+  
+  .slide.home-1 .laptop {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin: auto;
+    flex-order: 4;
+  }
+
+  .slide.warehouse-1 .robot {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: calc(50% - 80px);
+    width: 160px;
+  }
+
+  .slide.warehouse-1 .shelves {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 200px 0;
+  }
+  .slide.warehouse-1 .single-shelf {
+    position: absolute;
+    display: block;
+    top: 380px;
+    left: calc(50% - 80px);
+    width: 160px;
+  }
+
+  .slide.warehouse-2 .crate {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 200px;
+  }
+
+  .slide.warehouse-3 .box {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 200px;
+  }
+
+  .slide.warehouse-4 .truck {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0 !important;
+    margin: 30px 0;
+    width: 80%;
+    transform: none;
+  }
+
+  #outside .road {
+    position: relative;
+    display: block;
+    width: calc(100% + 10em);
+    height: 300px;
+    top: 0;
+    left: -5em;
+    margin-bottom: 400px;
+  }
+
+  #outside .road:after {
+    top: calc(50%);
+    left: 0;
+    height: 0;
+    width: 100%;
+    border-bottom: 1px dashed #E2DC2D;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+  }
+
+  #outside .road .truck-mobile {
+    transform: rotate(180deg);
+    margin: 25px auto 0;
+  }
+
+  .slide.outside-1 .plane {
+    position: absolute;
+    left: 300px;
+    top: -350px;
+    width: 300px;
+  }
+
+  .slide.outside-2 .regional-center {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    height: auto;
+    overflow: hidden;
+    background: none;
+    margin-bottom: 100px;
+  }
+
+  .slide.outside-2 .regional-center img {
+    position: relative;
+  }
+
+  .slide.outside-2 .drone {
+    left: 0;
+    top: 110%;
+    width: 200px;
+  }
+
+  .slide.outside-2 .drone-box {
+    width: 90px;
+    left: calc(0px + 55px);
+    top: calc(110% + 45px);
+  }
+
+  #outside .house-container {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+
+  section.quiz ul.quiz {
+    margin: 0;
+    height: 60vh;
+  }
+  section.quiz .list-unstyled {
+    font-size: 0;
+  }
+  section.quiz .list-unstyled li {
+    font-size: 1.7rem;
+    margin: 20px;
+    display: inline-block;
+    width: calc(50% - 80px);
+  }
+  section.quiz button {
+    width: 100%;
+    padding: 50px;
+    font-size: 3rem;
+  }
+  section.quiz .centered {
+    width: 80vw;
+  }
 }
