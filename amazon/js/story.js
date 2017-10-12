@@ -346,7 +346,7 @@ new ScrollMagic.Scene({
 
 // Drone leaving distribution center
 var homex = $('.house').offset().left - $('.drone').offset().left + $('.house').width()/2 - 50;
-var homey = $('.house').offset().top - $('.drone').offset().top + $('.house').height() - 30;
+var homey = $('.house').offset().top - $('.drone').offset().top + $('.house').height();
 var curvePath = {css: {bezier:{
     type: 'thru',
     curviness: 2,
@@ -368,7 +368,7 @@ var curvePath = {css: {bezier:{
 }}}
 new ScrollMagic.Scene({
   triggerElement: ".slide.outside-2",
-  duration: $window.height() * 3/4,
+  duration: $window.height(),
   offset: $window.height()/2
 })
 .setTween(new TimelineMax ()

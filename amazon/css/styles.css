@@ -17,6 +17,7 @@ section {
   box-sizing: border-box;
   padding: 3em;
   margin: 100px 0;
+  overflow: hidden;
 }
 section#home {
   color: #222;
@@ -139,6 +140,7 @@ section#outside {
   left: 0;
   right: 0;
   width: 100%;
+  pointer-events: none;
 }
 .slide.home-3 .fufillment-arrow {
   position: fixed;
@@ -263,10 +265,17 @@ section#outside {
   z-index: 3;
 }
 
-.slide.outside-2 .house {
-  position: absolute;
-  left: calc(-25% - 200px);
-  top: 80%;
+#outside .house-container {
+  position: relative;
+  width: 250%;
+  text-align: center;
+  left: -150%;
+  padding-bottom: 25px;
+}
+
+#outside .house {
+  position: relative;
+  display: inline;
   width: 400px;
 }
 
@@ -287,14 +296,20 @@ section#outside {
 }
 
 /* Newsquiz Styles */
+section.quiz {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 section.quiz .hidden {
   opacity: 0;
 }
 section.quiz #quiz-container {
   position: relative;
+  overflow: hidden;
 }
 section.quiz ul.quiz{
-  height: 500px;
+  height: 550px;
+  overflow: hidden;
 }
 section.quiz li.question_container {
   position: absolute;
@@ -382,4 +397,22 @@ section.quiz .how_you_did {
 }
 section.quiz .how_you_did a {
   color: white;
+}
+
+footer {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 1em;
+  color: white;
+  text-align: center;
+}
+footer a {
+  color: white;
+}
+
+#credits {
+  visibility: hidden;
+}
+.jquery-modal #credits {
+  visibility: visible;
 }
