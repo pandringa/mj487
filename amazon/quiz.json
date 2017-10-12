@@ -1,0 +1,142 @@
+[
+    {
+        "possible_answers": [
+            {
+                "answer": "Amazon Internet Services",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "What internet-related division makes more than $15 billion in annual revenue for Amazon?"
+            },
+            {
+                "answer": "The Cloud",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "What internet-related division makes more than $15 billion in annual revenue for Amazon?"
+            },
+            {
+                "answer": "Amazon Computing",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "What internet-related division makes more than $15 billion in annual revenue for Amazon?"
+            },
+            {
+                "answer": "Amazon Web Services",
+                "correct": true,
+                "subhed": "Correct!",
+                "text" : "Through Amazon Web Services, Amazon sells technology infrastructure that powers millions of websites including Netflix, GE, Expedia, Adobe, and many others. It is estimated that this makes Amazon the largest owner of computing capacity in the world.",
+                "title": "What internet-related division makes more than $15 billion in annual revenue for Amazon?"
+            }
+        ],
+        "question": {
+            "title": "What internet-related division makes more than $15 billion in annual revenue for Amazon?"
+        }
+    },
+    {
+        "possible_answers": [
+            {
+                "answer": "70",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "Approximately how many fufillment centers does Amazon have in the United States?"
+            },
+            {
+                "answer": "50",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "Approximately how many fufillment centers does Amazon have in the United States?"
+            },
+            {
+                "answer": "140",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "Approximately how many fufillment centers does Amazon have in the United States?"
+            },
+            {
+                "answer": "90",
+                "correct": true,
+                "subhed": "Correct!",
+                "text" : "While Amazon doesn't reveal the exact number or locations of it's data centers, analysts estimate that Amazon has around 90 different fufillment centers in the US. If you include other facilities like smaller, more regional centers, that number increases to more than 200.",
+                "title": "Approximately how many fufillment centers does Amazon have in the United States?"
+            }
+        ],
+        "question": {
+            "title": "Approximately how many fufillment centers does Amazon have in the United States?"
+        }
+    },
+    {
+        "possible_answers": [
+            {
+                "answer": "Carriers",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "What is the name for Amazon's warehouse robots that carry shelves?"
+            },
+            {
+                "answer": "Alexa",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "What is the name for Amazon's warehouse robots that carry shelves?"
+            },
+            {
+                "answer": "Anton",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "What is the name for Amazon's warehouse robots that carry shelves?"
+            },
+            {
+                "answer": "Kiva",
+                "correct": true,
+                "subhed": "Correct!",
+                "text" : "In 2012, Amazon acquired a company called Kiva Systems for $775 million, and used their technology to build their current army of 45,000 Kiva robots across their warehouses.",
+                "title": "What is the name for Amazon's warehouse robots that carry shelves?"
+            }
+        ],
+        "question": {
+            "title": "What is the name for Amazon's warehouse robots that carry shelves?"
+        }
+    },
+    {
+        "possible_answers": [
+            {
+                "answer": "Container Ships",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "Which of the following methods of transportation is Amazon <b>NOT</b> investing in?"
+            },
+            {
+                "answer": "Airplanes",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "Which of the following methods of transportation is Amazon <b>NOT</b> investing in?"
+            },
+            {
+                "answer": "Drones",
+                "correct": false,
+                "subhed": "Incorrect :(",
+                "text" : "",
+                "title": "Which of the following methods of transportation is Amazon <b>NOT</b> investing in?"
+            },
+            {
+                "answer": "Vespa (scooters)",
+                "correct": true,
+                "subhed": "Correct!",
+                "text" : "Amazon has acquired planes for their PrimeAir freight service, container ships for international shipping, and drones for last-mile delivery to homes, but they have not (yet) made any investment in Vespa scooters.",
+                "title": "Which of the following methods of transportation is Amazon <b>NOT</b> investing in?"
+            }
+        ],
+        "question": {
+            "title": "Which of the following methods of transportation is Amazon <b>NOT</b> investing in?"
+        }
+    }
+]

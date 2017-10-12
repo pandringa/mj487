@@ -285,3 +285,101 @@ section#outside {
   width: 60px;
   z-index: 2;
 }
+
+/* Newsquiz Styles */
+section.quiz .hidden {
+  opacity: 0;
+}
+section.quiz #quiz-container {
+  position: relative;
+}
+section.quiz ul.quiz{
+  height: 500px;
+}
+section.quiz li.question_container {
+  position: absolute;
+  box-sizing: border-box;
+  list-style: none;
+  top: 0;
+  left: calc(100% + 3em);
+  width: 100%;
+  padding: 20px;
+  transition: left 1s;
+}
+section.quiz li.question_container.current {
+  left: 0;
+}
+section.quiz li.question_container.previous {
+  left: calc(-100% - 3em);
+}
+section.quiz .list-unstyled {
+  padding-left: 0;
+}
+section.quiz .list-unstyled li, section.quiz button{
+  display: block;
+  list-style: none;
+  outline: none;
+  background-color: #559D4D;
+  padding: 5px 20px;
+  margin: 10px 0;
+  color: white;
+  border: none;
+  border-bottom: #478540 4px solid;
+  cursor: pointer;
+  transition: opacity 0.3s, border-color 0.3s, background-color 0.3s;
+}
+section.quiz .list-unstyled li:hover{
+  background-color: #478540;
+}
+section.quiz .list-unstyled li:active {
+  background-color: #48B7F3;
+  border-color: #3E9DCF;
+}
+section.quiz .list-unstyled li.selected {
+  background-color: #48B7F3;
+  border-width: 0;
+}
+section.quiz button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #EBDE58;
+  border-color: #D5CA51;
+  color: #111;
+}
+section.quiz button:hover {
+  background-color: #D5CA51;
+}
+section.quiz button:active {
+  background-color: #C6BB4B;
+  border-color: #C6BB4B;
+}
+section.quiz button.next-bottom {
+  margin-left: 20px;
+}
+section.quiz .center-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+section.quiz .centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 500px;
+}
+section.quiz .centered p, section.quiz .centered button {
+  margin: auto;
+}
+section.quiz .title {
+  color: white;
+  font-size: 1.6em;
+}
+section.quiz .how_you_did {
+  color: white;
+  font-size: 1.4em;
+}
+section.quiz .how_you_did a {
+  color: white;
+}

@@ -281,7 +281,6 @@ new ScrollMagic.Scene({
 
 // Pin truck
 var truckPin = $('.regional-center').offset().top - 50 - $('.truck.truck-1').offset().top;
-console.log(truckPin);
 new ScrollMagic.Scene({
   triggerElement: ".truck.truck-1",
   duration: truckPin,
@@ -396,3 +395,74 @@ new ScrollMagic.Scene({
 )
 .addIndicators()
 .addTo(controller);
+
+/***********************************************
+**             News Quiz                      **
+************************************************/
+$.ajax({
+  method: 'GET',
+  url: 'quiz.json',
+  datatype: 'json'
+})
+.done(setUpQuiz)
+.fail((error) => {
+  console.log("Quiz didn't load or JSON is wrong");
+});
+
+function shuffle(arr){
+  // From https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+  for (let i = arr.length; i; i--) {
+    let j = Math.floor(Math.random() * i);
+    [arr[i - 1], arr[j]] = [arr[j], arr[i - 1]];
+  }
+}
+
+function setUpQuiz(questions) {
+  for(let q of questions){
+    shuffle(q.possible_answers)
+  }
+  $('#quiz-container').quiz(questions, [
+    "You got zero out of four correct. Why don't you just <a href='#home'>scroll to the top</a> and read it again...",
+    "You got one out of four correct. At least you learned <i>something</i>.",
+    "You got two out of four correct. Not too shabby, but you've definitely got room to learn.",
+    "You got three out of four correct. That's pretty good – consider yourself an Amazon Expert.",
+    "You got four out of four correct: you're pretty much the next Jeff Bezos!"
+  ], {});
+  $('.how_you_did').hide();
+  $('ul.quiz').prepend(`
+    <li class="question_container row-fluid question_-1 current initial">
+      <div class="center-container">
+        <div class="centered">
+          <h1 class="title">How well do you know how Amazon works?</h1>
+          <button class="next">Start Quiz ></button>
+        </div>
+      </div>
+    </li>
+  `);
+  $('ul.quiz').append(`
+    <li class="question_container row-fluid question_${questions.length} answers">
+      <div class="center-container">
+        <div class="centered">
+        </div>
+      </div>
+    </li>
+  `)
+  var currentSlide = -1;
+  $('button.next').on('click', (evt) => {
+    if(currentSlide == -1){
+      $('.next.hidden').removeClass('hidden');
+    }
+    if(currentSlide == questions.length-2){
+      $('.next-bottom').text('Finish >')
+    }
+    if(currentSlide == questions.length-1){
+      $('.how_you_did').appendTo('li.answers .centered');
+      $('.how_you_did').show();
+      $('.next-bottom').addClass('hidden');
+    }
+    $('.question_'+currentSlide).addClass('previous');
+    $('.question_'+currentSlide).removeClass('current');
+    currentSlide ++;
+    $('.question_'+currentSlide).addClass('current');
+  });
+}
