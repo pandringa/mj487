@@ -67,9 +67,32 @@ section#outside {
 }
 .slide.home-1 .laptop {
   position: absolute;
-  bottom: 80px;
-  left: -600px;
+  bottom: 60px;
+  left: -120%;
   width: 500px;
+}
+.slide.home-1 .laptop img {
+  width: 100%;
+}
+.slide.home-1 .laptop .screen {
+  z-index: -1;
+  position: absolute;
+  width: 78%;
+  height: 83%;
+  left: 12%;
+  top: 4%;
+  overflow: hidden;
+}
+
+.slide.home-1 .laptop .screen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide.home-1 .laptop .screen img.checkout {
+  left: 100%;
 }
 
 .slide.home-1 .cloud {

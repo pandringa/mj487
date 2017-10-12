@@ -35,7 +35,7 @@ if(!IS_MOBILE){ // Full screen animations
   .setTween(new TimelineMax ()
     .add([
       TweenMax.to(".ground", 1, {x: -1500}),
-      TweenMax.to("img.laptop", 1, {y: -100}),
+      TweenMax.to(".laptop", 1, {y: -100}),
       TweenMax.to(".cloud-1", 1, {x: -100, y: h/8}),
       TweenMax.to(".cloud-2", 1, {x: -200, y: h/8}),
       TweenMax.to(".cloud-3", 1, {x: 0, y: h/4}),
@@ -44,8 +44,9 @@ if(!IS_MOBILE){ // Full screen animations
       TweenMax.to(".cloud-6", 1, {x: 100, y: h/8}),
       TweenMax.to(".cloud-7", 1, {x: 50, y: h/16}),
       TweenMax.to(".server", 1, {css: {opacity: 1, scale: 1}}),
+      TweenMax.to(".laptop .checkout", 1, {css: {left: "0"}})
     ]))
-  .setPin('img.laptop', {pushFollowers: false})
+  .setPin('.laptop', {pushFollowers: false})
   .addIndicators()
   .addTo(controller);
 
@@ -143,7 +144,6 @@ if(!IS_MOBILE){ // Full screen animations
   // Show Kiva Robot
   var shelfx = $('.single-shelf').offset().left - $('.robot').offset().left + $('.robot').width() + 13;
   var shelfy = 248 + $('.single-shelf').height() - $('.robot').height() + 17;
-  console.log(shelfx, shelfy);
   new ScrollMagic.Scene({
     triggerElement: ".slide.warehouse-1",
     duration: $window.height()/2,
@@ -288,11 +288,11 @@ if(!IS_MOBILE){ // Full screen animations
     .addCallback(function(){
       $('.box .open').toggleClass('active');
       $('.box .closed').toggleClass('active');
-    }, 0.25)
+    }, 0.5)
     .addCallback(function(){
       $('.box .closed').toggleClass('active');
       $('.box .labeled').toggleClass('active');
-    }, 0.5)
+    }, 1.5)
   )
   .addIndicators()
   .addTo(controller);
