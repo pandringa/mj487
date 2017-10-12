@@ -282,11 +282,11 @@ new ScrollMagic.Scene({
 // Pin truck
 var truckPin = $('.regional-center').offset().top - 50 - $('.truck.truck-1').offset().top;
 new ScrollMagic.Scene({
-  triggerElement: ".truck.truck-1",
+  triggerElement: ".truck-1",
   duration: truckPin,
   offset: -40
 })
-.setPin(".truck.truck-1")
+.setPin(".truck-1")
 .addIndicators()
 .addTo(controller);
 
@@ -297,7 +297,7 @@ new ScrollMagic.Scene({
   offset: 3*$window.height()/4
 })
 .setTween(new TimelineMax()
-  .to(".truck.truck-1", 1, {css: {bezier:{
+  .to(".truck-1", 1, {css: {bezier:{
     type: 'thru',
     curviness: 2,
     autoRotate: false,
@@ -307,7 +307,7 @@ new ScrollMagic.Scene({
           y: 50
         },
         {
-          x: -200,
+          x: $('.road').offset().left - $('.truck-1').offset().left + 12,
           y: 50
         }
     ]
