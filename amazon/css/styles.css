@@ -101,7 +101,7 @@ section#outside {
 }
 .slide.home-1 .cloud.cloud-5{
   width: 480px;
-  left: 360px;
+  left: calc(60% - 500px);
   top: 115px;
 }
 .slide.home-1 .cloud.cloud-6 {
@@ -153,7 +153,7 @@ section#outside {
 
 .slide.warehouse-1 .robot {
   position: fixed;
-  top: -100px;
+  top: -200px;
   left: 100px;
   width: 90px;
 }
@@ -173,16 +173,16 @@ section#outside {
 
 .slide.warehouse-2 .crate {
   position: absolute;
-  left: 150%;
+  left: calc(150%);
   width: 100px;
-  top: 500px;
+  top: 450px;
 }
 
 .slide.warehouse-3 .box {
   position: absolute;
-  left: 170%;
+  left: calc(150% + 50px);
   width: 100px;
-  top: 400px;
+  top: 440px;
 }
 .slide.warehouse-3 .box .box-state {
   position: absolute;
@@ -224,7 +224,7 @@ section#outside {
   position: absolute;
   height: 70%;
   width: 200px;
-  left: 25%;
+  left: 22%;
   background: #333;
   z-index: -1;
   overflow: hidden;
@@ -252,11 +252,11 @@ section#outside {
 
 .slide.outside-2 .regional-center {
   position: absolute;
-  left: -130%;
+  left: -150%;
   top: 45%;
-  width: 550px;
+  width: 140%;
   background: #5FB156;
-  height: 400px;
+  height: 375px;
 }
 .slide.outside-2 .regional-center img {
   width: 100%;
@@ -281,24 +281,24 @@ section#outside {
 
 .slide.outside-2 .drone {
   position: absolute;
-  left: calc(-125% + 200px);
-  top: 45%;
+  left: calc(-150% + 200px);
+  top: calc(45% + 100px);
   width: 120px;
   z-index: 2;
 }
 
 .slide.outside-2 .drone-box {
   position: absolute;
-  left: calc(-125% + 230px);
-  top: calc(45% + 25px);
+  left: calc(-150% + 230px);
+  top: calc(45% + 125px);
   width: 60px;
   z-index: 2;
 }
 
 /* Newsquiz Styles */
 section.quiz {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0 50px;
 }
 section.quiz .hidden {
   opacity: 0;
@@ -308,7 +308,7 @@ section.quiz #quiz-container {
   overflow: hidden;
 }
 section.quiz ul.quiz{
-  height: 550px;
+  height: 500px;
   overflow: hidden;
 }
 section.quiz li.question_container {

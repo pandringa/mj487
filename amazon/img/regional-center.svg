@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1335px" height="182px" viewBox="0 0 1335 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1335px" height="486px" viewBox="0 0 1335 486" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
     <title>Regional Center</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="35" width="1335" height="147"></rect>
+        <rect id="path-1" x="0" y="339" width="1335" height="147"></rect>
         <polygon id="path-2" points="0 37.5891144 0 0.223339483 62.8690044 0.223339483 62.8690044 74.9548893 0 74.9548893 0 37.5891144"></polygon>
     </defs>
     <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -12,10 +12,10 @@
             <g id="Group-2">
                 <g id="Rectangle-3">
                     <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    <rect stroke="#979797" stroke-width="1" x="0.5" y="35.5" width="1334" height="146"></rect>
+                    <rect stroke="#979797" stroke-width="1" x="0.5" y="339.5" width="1334" height="146"></rect>
                 </g>
-                <polygon id="Rectangle-3" fill="#B6B6B6" points="123.566482 0.925087697 1211.43352 0.925087697 1335 36 0 36"></polygon>
-                <g id="Group" transform="translate(29.000000, 59.000000)" fill="#2A2A2A">
+                <polygon id="Rectangle-3" fill="#B6B6B6" points="123.566482 0 1211.43352 0 1335 340 0 340"></polygon>
+                <g id="Group" transform="translate(29.000000, 363.000000)" fill="#2A2A2A">
                     <rect id="Rectangle-4-Copy-34" x="1170" y="63" width="43" height="38"></rect>
                     <rect id="Rectangle-4-Copy-33" x="1092" y="63" width="43" height="38"></rect>
                     <rect id="Rectangle-4-Copy-32" x="1014" y="63" width="43" height="38"></rect>
@@ -45,11 +45,11 @@
                     <rect id="Rectangle-4-Copy" x="78" y="0" width="43" height="38"></rect>
                     <rect id="Rectangle-4" x="0" y="0" width="43" height="38"></rect>
                 </g>
-                <rect id="Rectangle" fill="#1A1A1A" x="573" y="126" width="15" height="56"></rect>
-                <rect id="Rectangle" fill="#1A1A1A" x="573" y="126" width="203" height="15"></rect>
-                <rect id="Rectangle" fill="#1A1A1A" x="761" y="126" width="15" height="56"></rect>
+                <rect id="Rectangle" fill="#1A1A1A" x="573" y="430" width="15" height="56"></rect>
+                <rect id="Rectangle" fill="#1A1A1A" x="573" y="430" width="203" height="15"></rect>
+                <rect id="Rectangle" fill="#1A1A1A" x="761" y="430" width="15" height="56"></rect>
             </g>
-            <g id="new-ups-logo" transform="translate(643.000000, 47.000000)">
+            <g id="new-ups-logo" transform="translate(643.000000, 351.000000)">
                 <g id="Group-34">
                     <mask id="mask-3" fill="white">
                         <use xlink:href="#path-2"></use>

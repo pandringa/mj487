@@ -127,13 +127,17 @@ new ScrollMagic.Scene({
 .addTo(controller);
 
 // Show Kiva Robot
+var shelfx = $('.single-shelf').offset().left - $('.robot').offset().left + $('.robot').width() + 13;
+var shelfy = 248 + $('.single-shelf').height() - $('.robot').height() + 17;
+console.log(shelfx, shelfy);
 new ScrollMagic.Scene({
   triggerElement: ".slide.warehouse-1",
   duration: $window.height()/2,
 })
 .setTween(new TimelineMax ()
   .add([
-    new TweenMax.to(".robot", 1, {css: {
+    new TweenMax.to(".robot", 1, {
+    css: {
       bezier:{
         type: 'thru',
         curviness: 2,
@@ -144,12 +148,12 @@ new ScrollMagic.Scene({
                 top: 100,
             },
             {
-                left: 800,
-                top: 200,
+                left: shelfx-50,
+                top: shelfy-150,
             },
             {
-                left: 995,
-                top: 475,
+                left: shelfx,
+                top: shelfy,
             }
         ],
       }}
@@ -171,7 +175,7 @@ new ScrollMagic.Scene({
 // Move robot, introduce bin
 new ScrollMagic.Scene({
   triggerElement: ".slide.warehouse-2",
-  duration: $window.height() / 2,
+  duration: $window.height(),
   offset: $window.height() / 2,
 })
 .setTween(new TimelineMax ()
@@ -212,7 +216,7 @@ new ScrollMagic.Scene({
               top: 825
             },
             {
-              left: 900,
+              left: $('.crate').offset().left,
               top: 1000
             },
         ]
@@ -292,14 +296,14 @@ new ScrollMagic.Scene({
 
 // Move truck left
 new ScrollMagic.Scene({
-  triggerElement: ".slide.warehouse-4",
+  triggerElement: ".truck-1",
   duration: $window.height()/4,
-  offset: 3*$window.height()/4
+  offset: -40
 })
 .setTween(new TimelineMax()
   .to(".truck-1", 1, {css: {bezier:{
     type: 'thru',
-    curviness: 2,
+    curviness: 3,
     autoRotate: false,
     values: [
         {
@@ -365,7 +369,8 @@ var curvePath = {css: {bezier:{
           y: homey
         }
     ]
-}}}
+}}};
+var droneStart = $('.drone').offset().left
 new ScrollMagic.Scene({
   triggerElement: ".slide.outside-2",
   duration: $window.height(),
@@ -387,7 +392,7 @@ new ScrollMagic.Scene({
           y: homey-50
         },
         {
-          x: $window.width()-400,
+          x: $window.width()-droneStart,
           y: homey-100
         }
     ]
