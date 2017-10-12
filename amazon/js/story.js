@@ -28,7 +28,7 @@ if(!IS_MOBILE){ // Full screen animations
   // Movement between home-1 and home-2
   var h = -1 * $window.height();
   new ScrollMagic.Scene({
-    triggerElement: '.slide.home-2',
+    triggerElement: '.home-2',
     duration: $window.height() + 100,
     offset: -0.5*$window.height()
   })
@@ -52,7 +52,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Make arrow appear slightly later
   new ScrollMagic.Scene({
-    triggerElement: '.slide.home-2 .slide-inner',
+    triggerElement: '.home-2 .slide-inner',
     duration: 100
   })
   .setTween(new TweenMax.to('.arrow', 1, {opacity: 1}))
@@ -61,7 +61,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Hide Arrow and Laptop
   new ScrollMagic.Scene({
-    triggerElement: '.slide.home-3',
+    triggerElement: '.home-3',
     duration: 250,
     offset: -0.5*$window.height() + 100
   })
@@ -82,7 +82,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Show fufillment center
   new ScrollMagic.Scene({
-    triggerElement: '.slide.home-3',
+    triggerElement: '.home-3',
     duration: $window.height()/2,
   })
   .setTween(new TimelineMax ()
@@ -94,7 +94,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Show arrow
   new ScrollMagic.Scene({
-    triggerElement: '.slide.home-3',
+    triggerElement: '.home-3',
     offset: $window.height()/4,
     duration: $window.height()/4
   })
@@ -107,7 +107,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Hide arrow, server, clouds, and fufillment center
   new ScrollMagic.Scene({
-    triggerElement: '.slide.home-3',
+    triggerElement: '.home-3',
     offset: 3*$window.height()/4,
     duration: $window.height()/2
   })
@@ -145,7 +145,7 @@ if(!IS_MOBILE){ // Full screen animations
   var shelfx = $('.single-shelf').offset().left - $('.robot').offset().left + $('.robot').width() + 13;
   var shelfy = 248 + $('.single-shelf').height() - $('.robot').height() + 17;
   new ScrollMagic.Scene({
-    triggerElement: ".slide.warehouse-1",
+    triggerElement: ".warehouse-1",
     duration: $window.height()/2,
   })
   .setTween(new TimelineMax ()
@@ -178,7 +178,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Pin shelf
   new ScrollMagic.Scene({
-    triggerElement: ".slide.warehouse-1",
+    triggerElement: ".warehouse-1",
     duration: $window.height(),
     offset: $window.height()/2
   })
@@ -188,7 +188,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Move robot, introduce bin
   new ScrollMagic.Scene({
-    triggerElement: ".slide.warehouse-2",
+    triggerElement: ".warehouse-2",
     duration: $window.height(),
     offset: $window.height() / 2,
   })
@@ -243,7 +243,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   //Introduce Box, Hide Bin
   new ScrollMagic.Scene({
-    triggerElement: ".slide.warehouse-2",
+    triggerElement: ".warehouse-2",
     duration: $window.height() / 2,
     offset: $window.height() / 2,
   })
@@ -257,7 +257,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Move box, transition through colors
   new ScrollMagic.Scene({
-    triggerElement: ".slide.warehouse-3",
+    triggerElement: ".warehouse-3",
     duration: $window.height(),
     offset: $window.height()/2
   })
@@ -339,7 +339,7 @@ if(!IS_MOBILE){ // Full screen animations
 
   // Plane Across Screen
   new ScrollMagic.Scene({
-    triggerElement: ".slide.outside-1",
+    triggerElement: ".outside-1",
     duration: $window.height()/2,
     offset: $window.height()/2
   })
@@ -371,7 +371,7 @@ if(!IS_MOBILE){ // Full screen animations
   }}};
   var droneStart = $('.drone').offset().left
   new ScrollMagic.Scene({
-    triggerElement: ".slide.outside-2",
+    triggerElement: ".outside-2",
     duration: $window.height(),
     offset: $window.height()/2
   })

@@ -19,17 +19,17 @@ section {
   margin: 100px 0;
   overflow: hidden;
 }
-section#home {
+#home {
   color: #222;
   padding-left: 60%;
   margin-top: 0;
   padding-top: 0;
 }
-section#warehouse {
+#warehouse {
   color: #fff;
   padding-right: 60%;
 }
-section#outside {
+#outside {
   color: #FAFAFA;
   padding-left: 60%;
 }
@@ -48,16 +48,16 @@ section#outside {
   color: #FFCB44;
 }
 
-.slide.home-1 h1 {
+.home-1 h1 {
   font-size: 3.5em;
   text-align: center;
 }
-.slide.home-1 h4 {
+.home-1 h4 {
   text-align: center;
   font-weight: normal;
   font-family: 'Quattrocento Sans', sans-serif;
 }
-.slide.home-1 .ground {
+.home-1 .ground {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -65,16 +65,16 @@ section#outside {
   height: 90px;
   background-image: url(../img/ground.svg);
 }
-.slide.home-1 .laptop {
+.home-1 .laptop {
   position: absolute;
   bottom: 60px;
   left: -120%;
   width: 500px;
 }
-.slide.home-1 .laptop img {
+.home-1 .laptop img {
   width: 100%;
 }
-.slide.home-1 .laptop .screen {
+.home-1 .laptop .screen {
   z-index: -1;
   position: absolute;
   width: 78%;
@@ -84,60 +84,60 @@ section#outside {
   overflow: hidden;
 }
 
-.slide.home-1 .laptop .screen img {
+.home-1 .laptop .screen img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.slide.home-1 .laptop .screen img.checkout {
+.home-1 .laptop .screen .checkout {
   left: 100%;
 }
 
-.slide.home-1 .cloud {
+.home-1 .cloud {
   position: fixed;
   top: 0;
   left: 0;
 }
 
-.slide.home-1 .cloud.cloud-1 {
+.home-1 .cloud-1 {
   width: 300px;
   top: 0;
   left: 0;
 }
-.slide.home-1 .cloud.cloud-2 {
+.home-1 .cloud-2 {
   width: 270px;
   top: 120px;
   left: 45px;
 }
-.slide.home-1 .cloud.cloud-3 {
+.home-1 .cloud-3 {
   width: 300px;
-  top: 0px;
+  top: 0;
   left: 355px;
 }
-.slide.home-1 .cloud.cloud-4 {
+.home-1 .cloud-4 {
   width: 300px;
   top: 50px;
   left: 560px;
   transform: translateY(-50%);
 }
-.slide.home-1 .cloud.cloud-5{
+.home-1 .cloud-5{
   width: 480px;
   left: calc(60% - 500px);
   top: 115px;
 }
-.slide.home-1 .cloud.cloud-6 {
+.home-1 .cloud-6 {
   width: 400px;
   left: 830px;
 }
-.slide.home-1 .cloud.cloud-7 {
+.home-1 .cloud-7 {
   width: 200px;
   left: 1180px;
   top: 80px;
 }
 
-.slide.home-2 .server {
+.home-2 .server {
   width: 30%;
   max-width: 300px;
   position: fixed;
@@ -147,7 +147,7 @@ section#outside {
   z-index: -1;
   transform: scale(0.25);
 }
-.slide.home-2 .arrow {
+.home-2 .arrow {
   width: 140px;
   position: fixed;
   top: 300px;
@@ -157,7 +157,7 @@ section#outside {
   transform: rotate(-90deg);
 }
 
-.slide.home-3 .fufillment-center {
+.home-3 .fufillment-center {
   position: fixed;
   top: 100%;
   bottom: 0;
@@ -166,7 +166,7 @@ section#outside {
   width: 100%;
   pointer-events: none;
 }
-.slide.home-3 .fufillment-arrow {
+.home-3 .fufillment-arrow {
   position: fixed;
   width: 25%;
   top: 50%;
@@ -175,40 +175,39 @@ section#outside {
   opacity: 0;
 }
 
-.slide.warehouse-1 .robot {
+.warehouse-1 .robot {
   position: fixed;
   top: -200px;
   left: 100px;
   width: 90px;
 }
-.slide.warehouse-1 .shelves {
+.warehouse-1 .shelves {
   position: absolute;
   left: 150%;
   top: 90px;
   width: 400px;
 }
-.slide.warehouse-1 .single-shelf {
+.warehouse-1 .single-shelf {
   position: absolute;
   left: calc(150% + 152px);
   top: 248px;
   width: 96px;
   z-index: 2;
 }
-
-.slide.warehouse-2 .crate {
+.warehouse-2 .crate {
   position: absolute;
   left: calc(150%);
   width: 100px;
   top: 450px;
 }
 
-.slide.warehouse-3 .box {
+.warehouse-3 .box {
   position: absolute;
   left: calc(150% + 50px);
   width: 100px;
   top: 440px;
 }
-.slide.warehouse-3 .box .box-state {
+.warehouse-3 .box .box-state {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -218,29 +217,29 @@ section#outside {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
-.slide.warehouse-3 .box .box-state.active{
+.warehouse-3 .box .active{
   opacity: 1;
 }
 
-.slide.warehouse-4 .truck {
+.warehouse-4 .truck {
   position: absolute;
   top: 55%;
   width: 350px;
   transform: rotate(90deg);
 }
-.slide.warehouse-4 .truck.truck-1 {
+.warehouse-4 .truck-1 {
   left: 90%;
 }
-.slide.warehouse-4 .truck.truck-2 {
+.warehouse-4 .truck-2 {
   left: calc(90% + 125px);
 }
-.slide.warehouse-4 .truck.truck-3 {
+.warehouse-4 .truck-3 {
   left: calc(90% + 250px);
 }
-.slide.warehouse-4 .truck.truck-4 {
+.warehouse-4 .truck-4 {
   left: calc(90% + 375px);
 }
-.slide.warehouse-4 .truck.truck-5 {
+.warehouse-4 .truck-5 {
   left: calc(90% + 500px);
 }
 
@@ -262,11 +261,14 @@ section#outside {
   height: 100%;
   width: 0;
   border-right: 1px dashed #E2DC2D;
+  -moz-transform: scale(10);
+  -ms-transform: scale(10);
+  -o-transform: scale(10);
   -webkit-transform: scale(10);
   transform: scale(10);
 }
 
-.slide.outside-1 .plane {
+.outside-1 .plane {
   position: fixed;
   left: -150px;
   top: 50%;
@@ -274,7 +276,7 @@ section#outside {
   z-index: 10;
 }
 
-.slide.outside-2 .regional-center {
+.outside-2 .regional-center {
   position: absolute;
   left: -150%;
   top: 45%;
@@ -282,7 +284,7 @@ section#outside {
   background: #5FB156;
   height: 375px;
 }
-.slide.outside-2 .regional-center img {
+.outside-2 .regional-center img {
   width: 100%;
   position: absolute;
   top: 0;
@@ -300,10 +302,9 @@ section#outside {
 #outside .house {
   position: relative;
   display: inline;
-  width: 400px;
 }
 
-.slide.outside-2 .drone {
+.outside-2 .drone {
   position: absolute;
   left: calc(-150% + 200px);
   top: calc(45% + 100px);
@@ -311,7 +312,7 @@ section#outside {
   z-index: 2;
 }
 
-.slide.outside-2 .drone-box {
+.outside-2 .drone-box {
   position: absolute;
   left: calc(-150% + 230px);
   top: calc(45% + 125px);
@@ -320,22 +321,22 @@ section#outside {
 }
 
 /* Newsquiz Styles */
-section.quiz {
+#quiz {
   margin: 0;
   padding: 0 50px;
 }
-section.quiz .hidden {
+#quiz .hidden {
   opacity: 0;
 }
-section.quiz #quiz-container {
+#quiz-container {
   position: relative;
   overflow: hidden;
 }
-section.quiz ul.quiz{
+#quiz .quiz{
   height: 520px;
   overflow: hidden;
 }
-section.quiz li.question_container {
+#quiz .question_container {
   position: absolute;
   box-sizing: border-box;
   list-style: none;
@@ -345,19 +346,18 @@ section.quiz li.question_container {
   padding: 20px;
   transition: left 1s;
 }
-section.quiz li.question_container.current {
+#quiz .current {
   left: 0;
 }
-section.quiz li.question_container.previous {
+#quiz .previous {
   left: calc(-100% - 3em);
 }
-section.quiz .list-unstyled {
+#quiz .possible_answers {
   padding-left: 0;
 }
-section.quiz .list-unstyled li, section.quiz button{
+#quiz .possible_answers li, #quiz button {
   display: block;
   list-style: none;
-  outline: none;
   background-color: #559D4D;
   padding: 5px 20px;
   margin: 10px 0;
@@ -367,40 +367,40 @@ section.quiz .list-unstyled li, section.quiz button{
   cursor: pointer;
   transition: opacity 0.3s, border-color 0.3s, background-color 0.3s;
 }
-section.quiz .list-unstyled li:hover{
+#quiz .possible_answers li:hover{
   background-color: #478540;
 }
-section.quiz .list-unstyled li:active {
+#quiz .possible_answers li:active {
   background-color: #48B7F3;
   border-color: #3E9DCF;
 }
-section.quiz .list-unstyled li.selected {
+#quiz .possible_answers li.selected {
   background-color: #48B7F3;
   border-width: 0;
 }
-section.quiz button {
+#quiz button {
   padding: 10px 20px;
   font-size: 14px;
   background-color: #EBDE58;
   border-color: #D5CA51;
   color: #111;
 }
-section.quiz button:hover {
+#quiz button:hover {
   background-color: #D5CA51;
 }
-section.quiz button:active {
+#quiz button:active {
   background-color: #C6BB4B;
   border-color: #C6BB4B;
 }
-section.quiz button.next-bottom {
+#quiz .next-bottom {
   margin-left: 20px;
 }
-section.quiz .center-container {
+#quiz .center-container {
   position: relative;
   width: 100%;
   height: 400px;
 }
-section.quiz .centered {
+#quiz .centered {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -408,18 +408,18 @@ section.quiz .centered {
   text-align: center;
   max-width: 500px;
 }
-section.quiz .centered p, section.quiz .centered button {
+#quiz .centered p, #quiz .centered button {
   margin: auto;
 }
-section.quiz .title {
+#quiz .title {
   color: white;
   font-size: 1.6em;
 }
-section.quiz .how_you_did {
+#quiz .how_you_did {
   color: white;
   font-size: 1.4em;
 }
-section.quiz .how_you_did a {
+#quiz .how_you_did a {
   color: white;
 }
 
@@ -455,7 +455,7 @@ footer a {
   }
   section .slide {
     flex-flow: column;
-    height: auto !important;
+    height: auto;
     margin: 100px 0;
   }
   section .slide-inner {
@@ -468,7 +468,7 @@ footer a {
     display: inherit !important;
   }
   
-  .slide.home-1 .laptop {
+  .home-1 .laptop {
     position: relative;
     display: block;
     top: 0;
@@ -477,7 +477,7 @@ footer a {
     flex-order: 4;
   }
 
-  .slide.warehouse-1 .robot {
+  .warehouse-1 .robot {
     position: absolute;
     display: block;
     top: 0;
@@ -485,7 +485,7 @@ footer a {
     width: 160px;
   }
 
-  .slide.warehouse-1 .shelves {
+  .warehouse-1 .shelves {
     position: relative;
     display: block;
     top: 0;
@@ -493,7 +493,7 @@ footer a {
     width: 100%;
     margin: 200px 0;
   }
-  .slide.warehouse-1 .single-shelf {
+  .warehouse-1 .single-shelf {
     position: absolute;
     display: block;
     top: 380px;
@@ -501,7 +501,7 @@ footer a {
     width: 160px;
   }
 
-  .slide.warehouse-2 .crate {
+  .warehouse-2 .crate {
     position: relative;
     display: block;
     top: 0;
@@ -509,7 +509,7 @@ footer a {
     width: 200px;
   }
 
-  .slide.warehouse-3 .box {
+  .warehouse-3 .box {
     position: relative;
     display: block;
     top: 0;
@@ -517,11 +517,11 @@ footer a {
     width: 200px;
   }
 
-  .slide.warehouse-4 .truck {
+  .warehouse-4 .truck {
     position: relative;
     display: block;
     top: 0;
-    left: 0 !important;
+    left: 0;
     margin: 30px 0;
     width: 80%;
     transform: none;
@@ -552,14 +552,14 @@ footer a {
     margin: 25px auto 0;
   }
 
-  .slide.outside-1 .plane {
+  .outside-1 .plane {
     position: absolute;
     left: 300px;
     top: -350px;
     width: 300px;
   }
 
-  .slide.outside-2 .regional-center {
+  .outside-2 .regional-center {
     position: relative;
     display: block;
     top: 0;
@@ -570,17 +570,17 @@ footer a {
     margin-bottom: 100px;
   }
 
-  .slide.outside-2 .regional-center img {
+  .outside-2 .regional-center img {
     position: relative;
   }
 
-  .slide.outside-2 .drone {
+  .outside-2 .drone {
     left: 0;
     top: 110%;
     width: 200px;
   }
 
-  .slide.outside-2 .drone-box {
+  .outside-2 .drone-box {
     width: 90px;
     left: calc(0px + 55px);
     top: calc(110% + 45px);
@@ -594,25 +594,25 @@ footer a {
   }
 
 
-  section.quiz ul.quiz {
+  #quiz .quiz {
     margin: 0;
     height: 60vh;
   }
-  section.quiz .list-unstyled {
+  #quiz .possible_answers {
     font-size: 0;
   }
-  section.quiz .list-unstyled li {
+  #quiz .possible_answers li {
     font-size: 1.7rem;
     margin: 20px;
     display: inline-block;
     width: calc(50% - 80px);
   }
-  section.quiz button {
+  #quiz button {
     width: 100%;
     padding: 50px;
     font-size: 3rem;
   }
-  section.quiz .centered {
+  #quiz .centered {
     width: 80vw;
   }
 }
