@@ -276,7 +276,7 @@ if(!IS_MOBILE){ // Full screen animations
         ],
       }}
     })
-    .to(".box", 1, {css: {scale: 0.5, top: 1150}})
+    .to(".box", 1, {css: {scale: 0.5, top: 1200}})
     .to(".box", 0.01, {css: {opacity: 0}})
     .addCallback(function(){
       $('.box .open').toggleClass('active');
