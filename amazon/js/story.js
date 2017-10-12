@@ -599,7 +599,7 @@ if(!IS_MOBILE){ // Full screen animations
           },
           {
             x: homex + $('.house').width() / 2,
-            y: homey + $('.house').height() + 250
+            y: homey + $('.house').height() + 200
           }
       ]
   }};

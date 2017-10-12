@@ -659,6 +659,7 @@ footer a {
     left: 0;
     top: 0;
     padding: 200px 0;
+    overflow: visible;
   }
 
   .house-container .drone {
