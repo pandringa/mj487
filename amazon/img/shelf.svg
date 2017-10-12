@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="350px" viewBox="0 0 130 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Shelf</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="3.4 20 127.4 20 127.4 322.8 3.4 322.8"></polygon>
+    </defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Shelf">
+            <path d="M3.4,328.315789 L3.4,346.884211" id="Line-3" stroke="#5A5959" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M127.4,328.315789 L127.4,346.884211" id="Line-3" stroke="#5A5959" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M24,328.3 L24,329.8" id="Line-3" stroke="#5A5959" stroke-width="6" stroke-linecap="square"></path>
+            <path d="M111.2,328.3 L111.2,329.8" id="Line-3" stroke="#5A5959" stroke-width="6" stroke-linecap="square"></path>
+            <g id="Rectangle-5">
+                <use fill="#F5C22E" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <path stroke="#5A5959" stroke-width="3" d="M1.9,18.5 L128.9,18.5 L128.9,324.3 L1.9,324.3 L1.9,18.5 Z"></path>
+            </g>
+            <polygon id="Rectangle-6" fill="#C39718" points="15.5684595 54.8 115.298095 54.8 127.4 71.2 3.4 71.2"></polygon>
+            <polygon id="Rectangle-6" fill="#3F3F3F" points="13.7581519 0 116.309288 0 130 17.2 0 17.2"></polygon>
+            <path d="M15.4,21 L15.4,56.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M115.2,21 L115.2,56.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <polygon id="Rectangle-6" fill="#C39718" points="15.1684595 106 114.898095 106 127 122.4 3 122.4"></polygon>
+            <path d="M15.4,75 L15.4,107.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M114.2,75 L114.2,107.688" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <polygon id="Rectangle-6" fill="#C39718" points="15.1684595 156 114.898095 156 127 172.4 3 172.4"></polygon>
+            <path d="M15.4,125 L15.4,157.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M114.2,125 L114.2,157.688" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <polygon id="Rectangle-6" fill="#C39718" points="15.1684595 206 114.898095 206 127 222.4 3 222.4"></polygon>
+            <path d="M14.9333333,175 L14.9333333,207.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M113.8,175 L113.8,207.688" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <polygon id="Rectangle-6" fill="#C39718" points="15.1684595 256 114.898095 256 127 272.4 3 272.4"></polygon>
+            <path d="M14.9333333,225 L14.9333333,257.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M113.8,225.8 L113.8,258.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <polygon id="Rectangle-6" fill="#C39718" points="15.1684595 306 114.898095 306 127 322.4 3 322.4"></polygon>
+            <path d="M14.9333333,275 L14.9333333,307.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M113.8,275.8 L113.8,308.488" id="Line-2" stroke="#C39718" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M2.5,72.7 L128.095935,72.7" id="Line" stroke="#5A5959" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M2.904,123.9 L127.896,123.9" id="Line" stroke="#5A5959" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M3.90406504,172.9 L126.895935,172.9" id="Line" stroke="#5A5959" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M3.90406504,223.3 L126.895935,223.3" id="Line" stroke="#5A5959" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M3.90406504,273.3 L126.895935,273.3" id="Line" stroke="#5A5959" stroke-width="3" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

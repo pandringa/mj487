@@ -1,0 +1,287 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 16px;
+  background: #A5D8FF;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Serif', serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3em;
+  margin: 100px 0;
+}
+section#home {
+  color: #222;
+  padding-left: 60%;
+  margin-top: 0;
+  padding-top: 0;
+}
+section#warehouse {
+  color: #fff;
+  padding-right: 60%;
+}
+section#outside {
+  color: #FAFAFA;
+  padding-left: 60%;
+}
+
+.slide {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide p {
+  line-height: 22px;
+}
+.slide b {
+  color: #FFCB44;
+}
+
+.slide.home-1 h1 {
+  font-size: 65px;
+  text-align: center;
+}
+.slide.home-1 h4 {
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+.slide.home-1 .ground {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 1015px;
+  height: 90px;
+  background-image: url(../img/ground.svg);
+}
+.slide.home-1 .laptop {
+  position: absolute;
+  bottom: 80px;
+  left: -600px;
+  width: 500px;
+}
+
+.slide.home-1 .cloud {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.slide.home-1 .cloud.cloud-1 {
+  width: 300px;
+  top: 0;
+  left: 0;
+}
+.slide.home-1 .cloud.cloud-2 {
+  width: 270px;
+  top: 120px;
+  left: 45px;
+}
+.slide.home-1 .cloud.cloud-3 {
+  width: 300px;
+  top: 0px;
+  left: 355px;
+}
+.slide.home-1 .cloud.cloud-4 {
+  width: 300px;
+  top: 50px;
+  left: 560px;
+  transform: translateY(-50%);
+}
+.slide.home-1 .cloud.cloud-5{
+  width: 480px;
+  left: 360px;
+  top: 115px;
+}
+.slide.home-1 .cloud.cloud-6 {
+  width: 400px;
+  left: 830px;
+}
+.slide.home-1 .cloud.cloud-7 {
+  width: 200px;
+  left: 1180px;
+  top: 80px;
+}
+
+.slide.home-2 .server {
+  width: 300px;
+  position: fixed;
+  top: 100px;
+  left: 30%;
+  opacity: 0;
+  z-index: -1;
+  transform: scale(0.25);
+}
+.slide.home-2 .arrow {
+  width: 140px;
+  position: fixed;
+  top: 300px;
+  left: 48%;
+  opacity: 0;
+  z-index: -1;
+  transform: rotate(-90deg);
+}
+
+.slide.home-3 .fufillment-center {
+  position: fixed;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.slide.home-3 .fufillment-arrow {
+  position: fixed;
+  width: 25%;
+  top: 50%;
+  left: 10%;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.slide.warehouse-1 .robot {
+  position: fixed;
+  top: -100px;
+  left: 100px;
+  width: 90px;
+}
+.slide.warehouse-1 .shelves {
+  position: absolute;
+  left: 150%;
+  top: 90px;
+  width: 400px;
+}
+.slide.warehouse-1 .single-shelf {
+  position: absolute;
+  left: calc(150% + 152px);
+  top: 248px;
+  width: 96px;
+  z-index: 2;
+}
+
+.slide.warehouse-2 .crate {
+  position: absolute;
+  left: 150%;
+  width: 100px;
+  top: 500px;
+}
+
+.slide.warehouse-3 .box {
+  position: absolute;
+  left: 170%;
+  width: 100px;
+  top: 400px;
+}
+.slide.warehouse-3 .box .box-state {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.slide.warehouse-3 .box .box-state.active{
+  opacity: 1;
+}
+
+.slide.warehouse-4 .truck {
+  position: absolute;
+  top: 55%;
+  width: 350px;
+  transform: rotate(-90deg);
+}
+.slide.warehouse-4 .truck.truck-1 {
+  left: 90%;
+}
+.slide.warehouse-4 .truck.truck-2 {
+  left: calc(90% + 125px);
+}
+.slide.warehouse-4 .truck.truck-3 {
+  left: calc(90% + 250px);
+}
+.slide.warehouse-4 .truck.truck-4 {
+  left: calc(90% + 375px);
+}
+.slide.warehouse-4 .truck.truck-5 {
+  left: calc(90% + 500px);
+}
+
+#outside .road {
+  position: absolute;
+  height: 70%;
+  width: 200px;
+  left: 25%;
+  background: #333;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#outside .road::after {
+  content: ' ';
+  position: absolute;
+  left: calc(50%);
+  top: 0;
+  height: 100%;
+  width: 0;
+  border-right: 1px dashed #E2DC2D;
+  -webkit-transform: scale(10);
+  transform: scale(10);
+}
+
+.slide.outside-1 .plane {
+  position: fixed;
+  left: -150px;
+  top: 50%;
+  width: 125px;
+  z-index: 10;
+}
+
+.slide.outside-2 .regional-center {
+  position: absolute;
+  left: -130%;
+  top: 45%;
+  width: 550px;
+  background: #5FB156;
+  height: 400px;
+}
+.slide.outside-2 .regional-center img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+.slide.outside-2 .house {
+  position: absolute;
+  left: calc(-25% - 200px);
+  top: 80%;
+  width: 400px;
+}
+
+.slide.outside-2 .drone {
+  position: absolute;
+  left: calc(-125% + 200px);
+  top: 45%;
+  width: 120px;
+  z-index: 2;
+}
+
+.slide.outside-2 .drone-box {
+  position: absolute;
+  left: calc(-125% + 230px);
+  top: calc(45% + 25px);
+  width: 60px;
+  z-index: 2;
+}
